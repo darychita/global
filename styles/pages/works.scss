@@ -1,0 +1,184 @@
+.works {
+    width: 85%;
+    height: 80vh;
+
+    @media screen and (max-width: 1260px) {
+        width: 100%;
+    }
+
+    .sub-header {    
+        font-size: 2em;
+        margin: $margin-block + 10px 0;
+
+        @media screen and (max-width: 700px) {
+            margin: 0 0 $margin-block 0;
+        }
+    }
+
+    &__slider {
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+
+        .works__slider__items-container {
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+        }
+
+        &__item {
+            width: 150px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            cursor: pointer;
+            visibility: hidden;
+
+            @media screen and (max-width: 1000px) {
+                width: 120px;
+            }
+
+            @media screen and (max-width: 840px) {
+                width: 90px;
+            }
+
+
+            &.prev, &.next, &.active {
+                visibility: visible;
+            }
+
+            &.prev, &.next {
+                transform: translateY(25%);
+
+                @media screen and (max-width: 700px){
+                    display: none;
+                }
+
+                .title {
+                    color: rgba($color: $text-primary, $alpha: 0.6);
+                    font-weight: 600;
+                    font-size: 0.7em;
+                    margin-top: 10px;    
+                }
+            }     
+
+            // prev slide
+            &.prev {
+                left: -60%;
+            }     
+
+            // prev next
+            &.next {
+                right: -60%;
+            }            
+
+            // image container
+            &-img {
+                height: 150px;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    height: 120px;
+                }
+    
+                @media screen and (max-width: 840px) {
+                    height: 90px;
+                }
+    
+            }
+
+            .title {
+                text-align: center;
+            }
+            .paragraph {
+                visibility: hidden;
+                margin: 0 auto;
+                text-align: center;
+                min-width: 300px * 0.9;
+                width: 90%;
+                font-weight: 500;
+            }
+
+            &.active {
+                width: 300px;
+
+                @media screen and (max-width: 1000px) {
+                    width: 290px;
+                }
+
+                @media screen and (max-width: 400px) {
+                    width: 275px;
+                }
+                
+                .works__slider__item-img {
+                    height: 300px;
+
+                    @media screen and (max-width: 1000px) {
+                        width: 240px;
+                        height: 240px;
+                    }
+        
+                    @media screen and (max-width: 840px) {
+                        width: 190px;
+                        height: 190px;                        
+                    }
+    
+                }
+
+                .paragraph {
+                    visibility: visible;
+                }    
+                
+            }
+
+        }
+    }
+    
+    &__slider-nav {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: $secondary;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        right: 0;
+        top: 107px;
+
+        img {
+            width: 20px;
+            filter: invert(100%);
+        }
+
+        &:first-child {
+            left: 0;
+            transform: scale(-1, 1);
+        }
+
+        @media screen and (max-width: 1000px) {
+            top: 83px;
+        }
+
+        @media screen and (max-width: 840px) {
+            top: 120px;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 40px;
+            height: 40px;    
+            img {
+                width: 15px;
+            }
+        }
+
+    }
+
+}

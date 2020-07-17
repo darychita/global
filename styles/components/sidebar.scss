@@ -1,0 +1,58 @@
+aside.sidebar {
+    width: 3px;
+    height: 75vh;
+    margin: 20px 0 100px 0;
+    padding: 30px 0;
+    background-color: $secondary;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 1260px) {
+        display: none;
+    }
+}
+
+.sidebar__point {
+    width: 4px;
+    height: 4px;
+    background-color: $text-primary;
+    border-radius: 100%;
+    margin-left: -1px;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+
+    &.sidebar__point-active {
+        background-color: $primary;
+        span:first-child {
+            color: $text-primary;
+            left: -30px;
+        }
+
+        span:last-child {
+            display: inline;
+        }
+    }
+    
+    span:first-child {
+        position: absolute;
+        left: 13px;
+        top: -0.55em;
+        color: $secondary;
+        font-size: 1.1em;
+        transition: .3s;
+    }
+
+    span:last-child {
+        display: none;
+        position: absolute;
+        left: 20px;
+        top: -0.55em;    
+        font-size: 1.15em;
+        transition: display .3s ease;
+    }
+
+}
+

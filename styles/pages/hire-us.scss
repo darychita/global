@@ -1,0 +1,149 @@
+.hire-us {
+    width: 80%;
+    
+    
+    @media screen and (max-width: 1260px)  {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 840px) {
+        > div {
+            display: flex;
+        }
+    }
+
+    .sub-header {
+        margin-bottom: $margin-top - 20px;
+
+        @media screen and (max-width: 470px) {
+            margin-bottom: $margin-block;
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &:last-child {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 840px) {
+            flex-direction: column;
+            width: 50%!important;
+        }
+
+        @media screen and (max-width: 470px) {
+            width: 48%!important;
+        }
+    }
+
+    &__buttons__item {
+        margin: 0 30px 25px 0;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        border: 2px solid $text-primary;
+        cursor: pointer;
+        background-color: transparent;
+        transition: background-color .2s ease-in-out,
+                    border-color .2s ease-in-out;
+
+        @media screen and (max-width: 840px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+         
+        @media screen and (max-width: 470px) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        img {
+            padding-top: 3px;
+            width: 0;
+            margin-right: 5px;
+            filter: invert(100%);
+            transition: width .2s ease-in-out;
+
+            @media screen and (max-width: 470px) {
+                margin-right: 2px;
+            }    
+        }
+
+        span {
+            display: inline-block;
+            padding: 15px 0;
+            font-family: 'Proxima Nova Th';
+            font-size: 17px;
+
+            @media screen and (max-width: 470px) {
+                font-size: 14px;
+            }
+    
+        }
+
+        &.active {
+            background-color: $primary;
+            border-color: $primary;
+
+            img {
+                width: 17px;
+
+                @media screen and (max-width: 470px) {
+                    width: 14px;
+                }    
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        margin-top: $margin-top;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            @media screen and (max-width: 840px) {
+                justify-content: space-between;
+            }
+        
+            @media screen and (max-width: 470px) {
+                flex-direction: column;
+            }
+        }
+
+        button {
+            outline: none;
+            border: none;
+            display: block;
+            margin: 50px auto 0 auto;
+            color: $text-primary;
+            text-transform: uppercase;
+            background-color: $primary;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 15px 100px 15px 100px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            
+            @media screen and (max-width: 470px) {
+                width: 100%;
+                padding: 15px 0;
+                margin-top: $margin-block;
+                font-size: 0.8em;
+            }
+        
+        }
+
+        @media screen and (max-width: 470px) {
+            margin-top: $margin-block - 10px;
+        }
+    
+    }
+
+}
+

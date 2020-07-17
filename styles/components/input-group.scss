@@ -1,0 +1,58 @@
+.input-group {
+
+    margin-right: $margin-block;
+    position: relative;
+
+    label {
+        position: absolute;
+        font-size: 1.5em;
+        top:0;
+        left: 0;
+        transition: top .2s ease;
+
+        @media screen and (max-width: 470px) {
+            font-size: 1.2em;
+        }    
+
+    }
+
+    input {
+        outline: none;
+        height: 40px;
+        width: 300px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid $text-primary;
+        color: $text-primary;
+        font-size: 1em;    
+        &:focus {
+            +label {
+                top: -15px;
+                font-size: 1em;
+
+                @media screen and (max-width: 470px) {
+                    top: -10px;
+                }            
+            }
+        }
+
+        @media screen and (max-width: 840px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 470px) {
+            font-size: 0.9em;
+        }    
+    }
+
+    @media screen and (max-width: 840px) {
+        width: 48%;
+        margin-right: 0;
+    }
+
+    @media screen and (max-width: 470px) {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+}

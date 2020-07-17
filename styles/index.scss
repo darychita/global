@@ -1,0 +1,25 @@
+// config
+@import "./variables";
+@import "./fonts";
+// layout 
+@import "./layout";
+@import "./keyframes";
+
+// components
+@import "./components/header";
+@import "./components/link";
+@import "./components/paragraph";
+@import "./components/topbar";
+@import "./components/sidebar";
+@import "./components/sub-header";
+@import "./components/hamburger-btn";
+@import "./components/title";
+@import "./components/arrow-right";
+@import "./components/input-group";
+// pages
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/hire-us";
+@import "./pages/works";
+@import "./pages/naviagtion";
